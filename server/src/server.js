@@ -1,7 +1,6 @@
 const express = require('express')
 const cors = require('cors')
 const todoRoutes = require('./routes/todo.routes')
-
 require('dotenv').config()
 
 const connectDB = require('./config/db')
@@ -11,6 +10,13 @@ connectDB()
 
 const app = express()
 const PORT = process.env.PORT || 3000
+
+app.use(
+	cors({
+		methods: 'GET, POST, DELETE, PUT',
+		origin: process.env.CLIENT_URL //ВЕРНУТЬСЯ
+	})
+)
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
