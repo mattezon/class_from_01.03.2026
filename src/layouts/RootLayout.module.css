@@ -1,0 +1,24 @@
+.navigation {
+	padding: 5px;
+	border: 2px dotted black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.link {
+	color: black;
+	font-size: 24px;
+	text-decoration: none;
+}
+
+.active {
+	background: red;
+}
+
+.main {
+	width: 800px;
+	height: 800px;
+	border: 2px solid black;
+}
